@@ -13,7 +13,9 @@ namespace Queues_Tas
 
         public Queue()
         {
-            front = 0;back = 0;count = 0;
+            front = 0;
+            back = 0;
+            count = 0;
 
             Q = new string[8];
         }
@@ -24,7 +26,7 @@ namespace Queues_Tas
             {
                 Q[back] = x;
 
-                back = back + 1;
+                back = (back + 1) % 8;
                 count = count + 1;
             }
             else
@@ -48,10 +50,14 @@ namespace Queues_Tas
         }
         public void Print()
         {
-            for (int x = 0; x < Q.Length; x = x + 1)
+            int a = front;
+            int b = back;
+            while (a != b)
             {
-                Console.WriteLine(Q[x]);
+                Console.WriteLine(Q[a]);
+                a = (a + 1) % 8;
             }
+            
         }
 
         public int size()

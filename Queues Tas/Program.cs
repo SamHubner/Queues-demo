@@ -19,21 +19,14 @@ namespace Queues_Tas
             one.add("seven");
             one.add("eight");
 
-            one.Print();
+    
 
             one.pop();
-            Console.WriteLine();
-
-            one.Print();
             one.pop();
-            Console.WriteLine();
+            one.add("three");
+            one.add("four");
 
-            one.size();
-            Console.ReadLine();
 
-            one.Print();
-            one.pop();
-            Console.WriteLine();
 
             one.Print();
         }
